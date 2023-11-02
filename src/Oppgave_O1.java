@@ -7,7 +7,7 @@ public class Oppgave_O1 {
 	private static int beregnSkattetInntekt(int inntekt) {
 		int inntekt_skattet = 0;
 		for (int i = 0; i < trinn_inntekt.length; i++) {
-			double trinn_skattet = Math.floor((inntekt - trinn_inntekt[i]) * trinn_skatt[i]);
+			int trinn_skattet = (int) Math.floor((inntekt - trinn_inntekt[i]) * trinn_skatt[i]);
 			if (trinn_skattet <= 0) {
 				break;
 			}
@@ -22,5 +22,4 @@ public class Oppgave_O1 {
 		
 		showMessageDialog(null, "Du må betale " + inntekt_skattet + "kr i skatt.\n Du står da igjen med " + (inntekt - inntekt_skattet) + "kr.");
 	}
-
 }
